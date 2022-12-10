@@ -12,4 +12,10 @@ public class PuzzleJava {
         }
         return rollArray;
     }
+
+    public String getRandomChar() {
+        int randCharIndex = randomRoll(0,25);
+        String[] charArray = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
+        return charArray[randCharIndex];
+    }
 }
