@@ -32,4 +32,12 @@ public class PuzzleJava {
         password = password.replaceAll("\\[", "").replaceAll("\\]","");
         return password;
     }
+
+    public String[] generatePasswordSet(int numSets) {
+        String[] passwords = new String[numSets];
+        for(int i = 0; i < numSets; i++){
+            passwords[i] = generatePassword();
+        }
+        return passwords;
+    }
 }

@@ -11,5 +11,10 @@ public class PuzzleTest {
         System.out.println(output);
         System.out.println(puzzleTime.getRandomChar());
         System.out.println(puzzleTime.generatePassword());
+        String[] passwords = puzzleTime.generatePasswordSet(8);
+        System.out.println("Generating a password set... Standby!");
+        for(int i = 0; i < passwords.length; i++){
+            System.out.println(passwords[i]);
+        }
     }
 }
