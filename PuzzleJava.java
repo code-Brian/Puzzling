@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Arrays;
 
 public class PuzzleJava {
     Random rand = new Random();
@@ -10,6 +11,7 @@ public class PuzzleJava {
         for(int i = 0; i < rollArray.length; i++){
             rollArray[i] = randomRoll(1,20);
         }
+
         return rollArray;
     }
 
@@ -17,5 +19,17 @@ public class PuzzleJava {
         int randCharIndex = randomRoll(0,25);
         String[] charArray = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
         return charArray[randCharIndex];
+    }
+
+    public String generatePassword() {
+        String[] passwordArr = new String[8];
+        for(int i = 0; i < 8; i++) {
+            passwordArr[i] = getRandomChar();
+        }
+        String password = Arrays.toString(passwordArr);
+        password = password.replaceAll(",", "");
+        password = password.replaceAll(" ", "");
+        password = password.replaceAll("\\[", "").replaceAll("\\]","");
+        return password;
     }
 }

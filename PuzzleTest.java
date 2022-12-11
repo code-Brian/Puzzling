@@ -10,5 +10,6 @@ public class PuzzleTest {
         String output = String.format("tenRolls length is: %s",tenRolls.length);
         System.out.println(output);
         System.out.println(puzzleTime.getRandomChar());
+        System.out.println(puzzleTime.generatePassword());
     }
 }
